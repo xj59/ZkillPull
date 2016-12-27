@@ -14,4 +14,4 @@ Post kills from Zkillboard's RedisQ to Slack using AWS Lambda
   * watchForAlliance: The alliance name for which you would like to be notified of kills.
 4. Run your Lambda on a schedule (http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/RunLambdaSchedule.html). 5 minutes should work and cost only a few cents per month.
 
-### Donate ISK In-Game to Cope Dogg
+### Donate ISK In-Game to Cope Bank
