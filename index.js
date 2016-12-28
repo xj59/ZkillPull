@@ -26,6 +26,7 @@ exports.handler = (event, context, callback) => {
           var corpPilots = [];
           var pushToSlack = false;
           var color = 'good';
+          var involvedPilotsMessage = 'Friendly Pilots Involved'
 
           killInfo.killmail.attackers.forEach(function (attacker) {
             if (attacker.finalBlow) {
@@ -43,6 +44,7 @@ exports.handler = (event, context, callback) => {
 
           if ((killInfo.killmail.victim.corporation && killInfo.killmail.victim.corporation.name === process.env.watchForCorp) || (killInfo.killmail.victim.alliance && process.env.watchForAlliance && killInfo.killmail.victim.alliance.name === process.env.watchForAlliance)) {
             color = 'danger';
+            involvedPilotsMessage = 'Friendly Fire'
             pushToSlack = true;
           }
 
@@ -83,15 +85,14 @@ exports.handler = (event, context, callback) => {
               title: killingPilot + ' killed ' + killInfo.killmail.victim.character.name + ' (' + killInfo.killmail.victim.corporation.name + ')',
               title_link: 'https://zkillboard.com/kill/' + killInfo.killID,
               thumb_url: 'https://imageserver.eveonline.com/Render/' + killInfo.killmail.victim.shipType.id + '_128.png',
-              fallback: 'test',
+              fallback: killingPilot + ' killed ' + killInfo.killmail.victim.character.name + ' (' + killInfo.killmail.victim.corporation.name + ')',
               "color": color,
-              "footer": 'Zkill-to-Slack - https://github.com/MattCopenhaver/zkill-to-slack',
-              "footer_icon": "https://imageserver.eveonline.com/Character/92626933_128.jpg"
+              "footer": 'Zkill-to-Slack - https://github.com/MattCopenhaver/zkill-to-slack'
             }
 
-            if (corpPilots.length > 1) {
+            if (corpPilots.length > 0) {
               formattedKillInfo.fields.push({
-                'title': 'Friendly Pilots Involved' ,
+                'title': involvedPilotsMessage,
                 'value': corpPilots.join(', '),
                 'short': false
               });
@@ -104,8 +105,7 @@ exports.handler = (event, context, callback) => {
               {
                 channel: process.env.channel,
                 username: "ZkillBot",
-                attachments: attachments,
-                icon_emoji: process.env.emojiIcon
+                attachments: attachments
               }, function (error, response, body) {
               console.log(error, response, body);
               request(options, callback);
