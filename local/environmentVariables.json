@@ -1,0 +1,7 @@
+{
+  "queueID": "rnadomQueueId",
+  "slackHookURL": "your testing slack hook url",
+  "channel": "your channel",
+  "watchForCorp": "Pandemic Horde Inc.",
+  "watchForAlliance": "Project.Mayhem."
+}
