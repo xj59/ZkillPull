@@ -22,7 +22,7 @@ var monitorZkill = function (lambdaCallback) {
   };
 
   var options = {
-      url: 'https://redisq.zkillboard.com/listen.php?queueID=' + process.env.queueID,
+      url: 'https://redisq.zkillboard.com/listen.php?ttw=1&queueID=' + process.env.queueID,
       headers: headers
   };
 
