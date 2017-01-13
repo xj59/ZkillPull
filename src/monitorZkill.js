@@ -8,11 +8,11 @@ var monitorZkill = function (lambdaCallback) {
 
   slack.setWebhook(process.env.slackHookURL);
 
-  console.log(process.env.queueID);
-  console.log(process.env.slackHookURL);
-  console.log(process.env.channel);
-  console.log(process.env.watchForCorp);
-  console.log(process.env.watchForAlliance);
+  console.log('queueID: ' + process.env.queueID);
+  console.log('slackHookURL: ' + process.env.slackHookURL);
+  console.log('channel: ' + process.env.channel);
+  console.log('watchForCorp: ' + process.env.watchForCorp);
+  console.log('watchForAlliance: ' + process.env.watchForAlliance);
 
   var headers = {
       'accept-encoding': 'null',
@@ -46,6 +46,7 @@ var monitorZkill = function (lambdaCallback) {
             }
             if ((attacker.corporation && attacker.corporation.name === process.env.watchForCorp) || (attacker.alliance && process.env.watchForAlliance && attacker.alliance.name === process.env.watchForAlliance)) {
               pushToSlack = true;
+              console.log('Found a kill (Attacking Corp/Alliance): ' + killInfo);
               alliedPilots.push('<https://zkillboard.com/character/' + attacker.character.id + '/|' + attacker.character.name + '>');
             }
           });
@@ -54,6 +55,7 @@ var monitorZkill = function (lambdaCallback) {
             color = 'danger';
             involvedPilotsMessage = 'Friendly Fire'
             pushToSlack = true;
+            console.log('Found a kill (Victim Corp/Alliance): ' + killInfo);
           }
 
           if (pushToSlack) {
@@ -109,7 +111,7 @@ var monitorZkill = function (lambdaCallback) {
             attachments = []
             attachments.push(formattedKillInfo);
 
-            console.log(attachments);
+            console.log('Attachments to Slack: ' + attachments);
 
             slack.webhook(
               {
