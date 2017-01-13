@@ -10,7 +10,7 @@ Post kills from Zkillboard's RedisQ to Slack
 
 ### Setup using your own server or computer:
 
-1. Checkout the code `git clone https://github.com/MattCopenhaver/zkill-to-slack`.
+1. Clone the repo `git clone https://github.com/MattCopenhaver/zkill-to-slack`.
 2. Navigate into the cloned directory `cd zkill-to-slack`.
 3. `npm install`.
 4. Update the configuration file specific to your needs (see [Config and Environment Variables](#config-and-environment-variables)).
