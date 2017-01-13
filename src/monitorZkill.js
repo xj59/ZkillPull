@@ -4,15 +4,9 @@ var commaIt = require('comma-it');
 
 slack = new Slack();
 
-var monitorZkill = function (lambdaCallback) {
-
+var monitorZkill = function (finishingCallback) {
+  console.log('Starting to pull data from Zkill RedisQ');
   slack.setWebhook(process.env.slackHookURL);
-
-  console.log('queueID: ' + process.env.queueID);
-  console.log('slackHookURL: ' + process.env.slackHookURL);
-  console.log('channel: ' + process.env.channel);
-  console.log('watchForCorp: ' + process.env.watchForCorp);
-  console.log('watchForAlliance: ' + process.env.watchForAlliance);
 
   var headers = {
       'accept-encoding': 'null',
@@ -127,7 +121,8 @@ var monitorZkill = function (lambdaCallback) {
             request(options, callback);
           }
       } else {
-        lambdaCallback(null, 'Finished');
+        console.log('No more kills on Zkill RedisQ...')
+        finishingCallback(null, 'Finished');
       }
   }
   request(options, callback);

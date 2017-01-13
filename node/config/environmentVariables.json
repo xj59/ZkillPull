@@ -1,7 +1,7 @@
 {
   "queueID": "randomQueueId",
   "slackHookURL": "your testing slack hook url",
-  "channel": "your channel",
+  "channel": "#random",
   "watchForCorp": "Pandemic Horde Inc.",
   "watchForAlliance": "Project.Mayhem."
 }
