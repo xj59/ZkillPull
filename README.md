@@ -1,6 +1,9 @@
 # zkill-to-slack
 Post kills from [Zkillboard's RedisQ](https://github.com/zKillboard/RedisQ) to Slack
 
+![example post](https://github.com/MattCopenhaver/zkill-to-slack/blob/master/slack%20kill.PNG)
+
+
 ### Setup using your own AWS Lambda:
 
 1. Download the latest release's Lambda.zip.
