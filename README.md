@@ -3,7 +3,7 @@ Forked from https://github.com/MattCopenhaver/zkill-to-slack
 
 Post kills from [Zkillboard's RedisQ](https://github.com/zKillboard/RedisQ) to Discord
 
-![example post](https://linktourl.com)
+![example post](https://github.com/phoenixbones/zkill-to-discord/blob/master/zkill-to-discord.PNG)
 
 ### Setup using your own server or computer:
 
@@ -21,4 +21,4 @@ Post kills from [Zkillboard's RedisQ](https://github.com/zKillboard/RedisQ) to D
 * corpID: The corporation name for which you would like to be notified of kills.
 * allianceID: The alliance name for which you would like to be notified of kills.
 
-### Donations Accepted using in-game ISK to Cope Bank
+### Donations Accepted using in-game ISK
