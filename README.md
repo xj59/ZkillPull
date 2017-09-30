@@ -2,7 +2,7 @@
 Forked from https://github.com/MattCopenhaver/zkill-to-slack
 
 Post kills from [Zkillboard's RedisQ](https://github.com/zKillboard/RedisQ) to Discord
-* Updated to work with ESI formatted kills
+* Updated from Crest to ESI formatted kills
 
 ![example post](https://github.com/phoenixbones/zkill-to-discord/blob/master/zkill-to-discord.PNG)
 
@@ -17,8 +17,10 @@ Post kills from [Zkillboard's RedisQ](https://github.com/zKillboard/RedisQ) to D
 
 ### Config and Environment Variables:
 * queueID: A unique identifier for your Zkill RedisQ, so that you do not get duplicate or miss kills.
-* discordHookID: The Discord Webhook ID. [Intro to Discord Webhooks](https://support.discordapp.com/hc/en-us/articles/228383668)
-* discordHookToken": The Discord Webhook Token.
+* discordHookID: The Discord Webhook ID. 
+* discordHookToken: The Discord Webhook Token.
+* * [Intro to Discord Webhooks](https://support.discordapp.com/hc/en-us/articles/228383668)
+* * Note that currently the variable for the discordHook are set in `.src/zkillmonitor.js` 
 * corpID: The corporation name for which you would like to be notified of kills.
 * allianceID: The alliance name for which you would like to be notified of kills.
 
