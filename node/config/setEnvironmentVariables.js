@@ -2,10 +2,10 @@ var environmentVariables = require('./environmentVariables.json')
 
 var setEnvironmentVariables = function () {
   process.env.queueID = environmentVariables.queueID;
-  process.env.slackHookURL = environmentVariables.slackHookURL;
-  process.env.channel = environmentVariables.channel;
-  process.env.watchForCorp = environmentVariables.watchForCorp;
-  process.env.watchForAlliance = environmentVariables.watchForAlliance;
+  process.env.discordHookID = environmentVariables.discordHookID;
+  process.env.discordHookToken = environmentVariables.discordHookToken;
+  process.env.corpID = environmentVariables.corpID;
+  process.env.allianceID = environmentVariables.allianceID;
 }
 
 module.exports = setEnvironmentVariables;

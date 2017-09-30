@@ -1,7 +1,7 @@
 {
   "queueID": "randomQueueId",
-  "slackHookURL": "your testing slack hook url",
-  "channel": "#random",
-  "watchForCorp": "Pandemic Horde Inc.",
-  "watchForAlliance": "Project.Mayhem."
+  "discordHookID": "set value in monitorZkill.js",
+  "discordHookToken": "set value in monitorZkill.js",
+  "corpID": "98388312",  
+  "allianceID": "1354830081"  
 }

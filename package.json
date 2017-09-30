@@ -1,7 +1,7 @@
 {
-  "name": "zkill-to-slack",
-  "version": "1.0.0",
-  "description": "Post kills from Zkillboard's RedisQ to Slack",
+  "name": "zkill-to-discord",
+  "version": "2.0.0",
+  "description": "Post kills from Zkillboard's RedisQ to Discord, forked from https://github.com/MattCopenhaver/zkill-to-slack",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,22 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MattCopenhaver/zkill-to-slack.git"
+    "url": "git+https://github.com/phoenixbones/zkill-to-discord.git"
   },
   "keywords": [
     "eve-online",
-    "slack",
+    "discord",
     "zkillboard"
   ],
-  "author": "Matt Copenhaver",
+  "author": "Phoenix Bones",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MattCopenhaver/zkill-to-slack/issues"
+    "url": "https://github.com/phoenixbones/zkill-to-discord/issues"
   },
-  "homepage": "https://github.com/MattCopenhaver/zkill-to-slack#readme",
+  "homepage": "https://github.com/phoenixbones/zkill-to-discord#readme",
   "dependencies": {
-    "comma-it": "0.0.7",
-    "request": "^2.79.0",
-    "slack-node": "^0.1.8"
+    "discord.js": "^11.2.1",
+    "nodemon": "^1.12.1",
+    "request": "^2.83.0"
   }
 }

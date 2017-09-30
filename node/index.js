@@ -4,10 +4,10 @@ var setEnvironmentVariables = require('./config/setEnvironmentVariables');
 setEnvironmentVariables();
 
 console.log('queueID: ' + process.env.queueID);
-console.log('slackHookURL: ' + process.env.slackHookURL);
-console.log('channel: ' + process.env.channel);
-console.log('watchForCorp: ' + process.env.watchForCorp);
-console.log('watchForAlliance: ' + process.env.watchForAlliance);
+console.log('discordHookID: ' + process.env.discordHookID);
+console.log('discordHookToken: ' + process.env.discordHookToken);
+console.log('corpID: ' + process.env.corpID);
+console.log('allianceID: ' + process.env.allianceID);
 
 function watch () {
  setTimeout(function() { monitorZkill(watch) }, 10000);
