@@ -2,6 +2,7 @@
 Forked from https://github.com/MattCopenhaver/zkill-to-slack
 
 Post kills from [Zkillboard's RedisQ](https://github.com/zKillboard/RedisQ) to Discord
+* Updated to work with ESI formatted kills
 
 ![example post](https://github.com/phoenixbones/zkill-to-discord/blob/master/zkill-to-discord.PNG)
 
