@@ -1,7 +1,7 @@
 {
   "queueID": "randomQueueId",
-  "discordHookID": "set value in monitorZkill.js",
-  "discordHookToken": "set value in monitorZkill.js",
+  "discordHookID": "enter the discord hook id",
+  "discordHookToken": "enter the discord hook token",
   "corpID": "98388312",  
   "allianceID": "1354830081"  
 }

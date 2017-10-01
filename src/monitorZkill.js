@@ -1,13 +1,10 @@
 const Discord = module.require("discord.js");
 var request = require('request');
 
-let WebhookID = "your webhook ID";
-let WebhookToken = "your webhook token";
-
-killmailsWebhook = new Discord.WebhookClient(WebhookID, WebhookToken)
-
 var monitorZkill = function (finishingCallback) {
   console.log('Initiating zKill redisQ');
+
+  killmailsWebhook = new Discord.WebhookClient(process.env.discordHookID, process.env.discordHookToken)
 
   var headers = {
       'accept-encoding': 'null',

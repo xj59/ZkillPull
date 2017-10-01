@@ -19,9 +19,8 @@ Post kills from [Zkillboard's RedisQ](https://github.com/zKillboard/RedisQ) to D
 * queueID: A unique identifier for your Zkill RedisQ, so that you do not get duplicate or miss kills.
 * discordHookID: The Discord Webhook ID. 
 * discordHookToken: The Discord Webhook Token.
-* * [Intro to Discord Webhooks](https://support.discordapp.com/hc/en-us/articles/228383668)
-* * Note that currently the variable for the discordHook are set in `.src/zkillmonitor.js` 
+  * Info on how to make a Discord webhook can be found here: [Intro to Discord Webhooks](https://support.discordapp.com/hc/en-us/articles/228383668)
 * corpID: The corporation name for which you would like to be notified of kills.
 * allianceID: The alliance name for which you would like to be notified of kills.
 
-### Donations Accepted using in-game ISK
+### Donations Accepted using in-game ISK to STK Scientific
