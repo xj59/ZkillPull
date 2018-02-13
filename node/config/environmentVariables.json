@@ -1,7 +1,7 @@
 {
   "queueID": "randomQueueId",
-  "discordHookID": "enter the discord hook id",
+  "discordHookID": "https://discordapp.com/api/webhooks/412795043242573825/yHFMJkI0CtCVc18Pe2lTBw-rEVT6UpJAUsDX4jkdsd1bklAW4-WknlWtPih2PEhqxI28",
   "discordHookToken": "enter the discord hook token",
-  "corpID": "98388312",  
-  "allianceID": "1354830081"  
+  "corpID": "1184675423",  
+  "allianceID": ""  
 }
